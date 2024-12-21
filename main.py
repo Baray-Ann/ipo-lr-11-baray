@@ -24,7 +24,7 @@ def main():
         
         while True:
             cargo_weight = input("Введите вес груза: ")
-            if cargo_weight.replace('.', '', 1).isdigit() and float(cargo_weight) > 0:
+            if cargo_weight.replace('.', '', 1) and float(cargo_weight) > 0:
                 cargo_weight = float(cargo_weight)
                 break
             else:
