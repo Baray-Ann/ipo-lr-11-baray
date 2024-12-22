@@ -1,9 +1,8 @@
 from .vehicle import Vehicle
-from .client import Client
 
 class Van(Vehicle):
-    def __init__(self, vehicle_id, capacity, is_refrigerated):
-        super().__init__(vehicle_id, capacity)
+    def __init__(self, is_refrigerated):
+        super().__init__()
         self.is_refrigerated = is_refrigerated
     
     def __str__(self): 

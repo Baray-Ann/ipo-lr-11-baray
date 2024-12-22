@@ -1,14 +1,15 @@
 from .client import Client
+import uuid
 
 class Vehicle:
-    def __init__(self, vehicle_id, capacity, current_load = 0):
-        if capacity > 0:
-            self.vehicle_id = vehicle_id
-            self.capacity = capacity
-            self.current_load = current_load
-            self.clients_list = []
-        else:
-            print("Введите грузоподъемность числом: ")
+
+    unique_id = uuid.uuid4()
+
+    def __init__(self, ):
+        self.vehicle_id = Vehicle.unique_id
+        self.capacity = 0
+        self.current_load = 0
+        self.clients_list = []
     
     def load_cargo(self, client):
         if not isinstance(client, Client): 

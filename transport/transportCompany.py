@@ -10,7 +10,7 @@ class TransportCompany:
         self.clients = []
     
     def add_vehicle(self, vehicle):
-        if not isinstance(vehicle, Vehicle):
+        if not isinstance(vehicle,(Ship, Van)):
             raise ValueError("Информация о транспорте должна быть объектом класса Vehicle")
         self.vehicles.append(vehicle)
         print("Транспортное средство добавлено")
